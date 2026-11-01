@@ -4,27 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Code Library</title>
+
+    <title>My Code Library | Practical Notebook</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>My Code Library</h1>
-        <p>All my codes, notes and practicals in one place.</p>
+    <header class="hero">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <span class="logo-icon">⌘</span>
+                My<span>Code</span>Library
+            </a>
+
+            <a href="#library" class="nav-button">Explore Practicals ↗</a>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="eyebrow">MY DIGITAL NOTEBOOK · 2026–27</span>
+
+                <h1>
+                    Learn. Build.<br>
+                    <span>Save your work.</span>
+                </h1>
+
+                <p>
+                    All your practicals, codes, commands and notes
+                    organized in one simple place. Your personal
+                    space to learn and grow.
+                </p>
+
+                <a href="#library" class="primary-button">
+                    Explore My Library ↓
+                </a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="floating-tag">✦ MY PRACTICAL SPACE</div>
+
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="dots">
+                            <i></i><i></i><i></i>
+                        </div>
+                        <span>my-terminal</span>
+                    </div>
+
+                    <div class="terminal-body">
+                        <p><span>$</span> git status</p>
+                        <p class="terminal-muted">Everything organized.</p>
+                        <p><span>$</span> python practical.py</p>
+                        <p class="terminal-success">✓ Practical completed!</p>
+                        <p><span>$</span> <b class="cursor">_</b></p>
+                    </div>
+                </div>
+
+                <div class="floating-number">
+                    <strong>10</strong>
+                    <span>PRACTICALS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-footer">
+            <span>YOUR WORKSPACE, YOUR RULES</span>
+            <span>SCROLL TO EXPLORE ↓</span>
+        </div>
     </header>
 
-    <main>
-        <input type="text" id="search"
-               placeholder="Search codes and notes...">
+    <main id="library">
 
-        <div id="categories"></div>
+        <section class="section-heading">
+            <div>
+                <span class="eyebrow dark-eyebrow">THE COLLECTION</span>
+                <h2>Your practical <span>library.</span></h2>
+                <p>
+                    Find your experiment, follow the steps and copy
+                    the instructions whenever you need them.
+                </p>
+            </div>
 
-        <div id="code-list"></div>
+            <div class="total-box">
+                <strong>10</strong>
+                <span>EXPERIMENTS</span>
+            </div>
+        </section>
+
+        <section class="library-area">
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search experiments, topics or commands..."
+                >
+            </div>
+
+            <div class="category-heading">
+                <span>EXPLORE BY CATEGORY</span>
+                <span class="small-note">Choose a topic below</span>
+            </div>
+
+            <div id="categories"></div>
+
+            <div class="list-heading">
+                <h3>All Experiments <span>✳</span></h3>
+                <p>YOUR LEARNING COLLECTION</p>
+            </div>
+
+            <div id="code-list"></div>
+
+        </section>
+
+        <section class="note-box">
+            <span class="note-icon">i</span>
+            <div>
+                <strong>A little note</strong>
+                <p>
+                    Some Python programs in the supplied notes are
+                    incomplete. Their available steps are included
+                    without inventing missing source code.
+                </p>
+            </div>
+        </section>
+
     </main>
 
-    <footer>My Personal Code Library</footer>
+    <footer>
+        <a href="#" class="footer-logo">My<span>Code</span>Library.</a>
+        <p>MADE WITH ♡ FOR LEARNING</p>
+        <a href="#" class="back-top">BACK TO TOP ↑</a>
+    </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
