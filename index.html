@@ -4,145 +4,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171e1b">
 
-    <title>My Code Library | Practical Notebook</title>
+    <title>My Code Library</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="hero">
-        <nav class="navbar">
-            <a href="#" class="logo">
-                <span class="logo-icon">⌘</span>
-                My<span>Code</span>Library
+    <!-- HEADER -->
+    <header class="hero" id="top">
+
+        <nav class="topbar">
+            <a class="brand" href="#top">
+                <span class="brand-mark">⌘</span>
+                <span>My<span class="brand-light">Code</span>Library</span>
             </a>
 
-            <a href="#library" class="nav-button">Explore Practicals ↗</a>
+            <a class="nav-link" href="#experiments">
+                Explore practicals ↗
+            </a>
         </nav>
 
         <div class="hero-content">
-            <div class="hero-text">
-                <span class="eyebrow">MY DIGITAL NOTEBOOK · 2026–27</span>
+            <div class="hero-copy-block">
+
+                <p class="eyebrow">
+                    MY DIGITAL NOTEBOOK · 2026–27
+                </p>
 
                 <h1>
                     Learn. Build.<br>
-                    <span>Save your work.</span>
+                    <em>Save your work.</em>
                 </h1>
 
-                <p>
+                <p class="hero-copy">
                     All your practicals, codes, commands and notes
-                    organized in one simple place. Your personal
-                    space to learn and grow.
+                    organized in one simple place. Open an experiment
+                    to find its procedure and complete program code.
                 </p>
 
-                <a href="#library" class="primary-button">
-                    Explore My Library ↓
+                <a class="hero-cta" href="#experiments">
+                    Explore my library ↓
                 </a>
-            </div>
 
-            <div class="hero-visual">
-                <div class="floating-tag">✦ MY PRACTICAL SPACE</div>
-
-                <div class="terminal">
-                    <div class="terminal-header">
-                        <div class="dots">
-                            <i></i><i></i><i></i>
-                        </div>
-                        <span>my-terminal</span>
-                    </div>
-
-                    <div class="terminal-body">
-                        <p><span>$</span> git status</p>
-                        <p class="terminal-muted">Everything organized.</p>
-                        <p><span>$</span> python practical.py</p>
-                        <p class="terminal-success">✓ Practical completed!</p>
-                        <p><span>$</span> <b class="cursor">_</b></p>
-                    </div>
-                </div>
-
-                <div class="floating-number">
-                    <strong>10</strong>
-                    <span>PRACTICALS</span>
-                </div>
             </div>
         </div>
 
-        <div class="hero-footer">
+        <div class="hero-bottom">
             <span>YOUR WORKSPACE, YOUR RULES</span>
             <span>SCROLL TO EXPLORE ↓</span>
         </div>
+
     </header>
 
-    <main id="library">
 
-        <section class="section-heading">
+    <!-- MAIN CONTENT -->
+    <main class="main-wrap" id="experiments">
+
+        <section class="intro-row">
+
             <div>
-                <span class="eyebrow dark-eyebrow">THE COLLECTION</span>
-                <h2>Your practical <span>library.</span></h2>
-                <p>
-                    Find your experiment, follow the steps and copy
-                    the instructions whenever you need them.
+                <p class="eyebrow dark-eyebrow">
+                    THE COLLECTION
+                </p>
+
+                <h2>
+                    Your practical <em>workspace.</em>
+                </h2>
+
+                <p class="section-copy">
+                    Search by topic or choose a category.
+                    Open an experiment to see the steps, Python
+                    programs, commands and expected outputs.
                 </p>
             </div>
 
-            <div class="total-box">
-                <strong>10</strong>
-                <span>EXPERIMENTS</span>
+            <div class="collection-stats">
+
+                <div>
+                    <strong id="experiment-count">10</strong>
+                    <span>EXPERIMENTS</span>
+                </div>
+
+                <div>
+                    <strong>05</strong>
+                    <span>CATEGORIES</span>
+                </div>
+
+                <div>
+                    <strong>01</strong>
+                    <span>NOTEBOOK</span>
+                </div>
+
             </div>
+
         </section>
 
-        <section class="library-area">
 
-            <div class="search-box">
-                <span>⌕</span>
+        <!-- SEARCH -->
+        <section class="toolbar">
+
+            <div class="search-wrap">
+                <span class="search-icon">⌕</span>
+
                 <input
-                    type="text"
                     id="search"
-                    placeholder="Search experiments, topics or commands..."
+                    type="search"
+                    placeholder="Search practicals, commands or topics..."
+                    autocomplete="off"
                 >
             </div>
 
-            <div class="category-heading">
-                <span>EXPLORE BY CATEGORY</span>
-                <span class="small-note">Choose a topic below</span>
+            <div
+                class="filters"
+                id="filters"
+                aria-label="Filter experiments">
             </div>
-
-            <div id="categories"></div>
-
-            <div class="list-heading">
-                <h3>All Experiments <span>✳</span></h3>
-                <p>YOUR LEARNING COLLECTION</p>
-            </div>
-
-            <div id="code-list"></div>
 
         </section>
 
-        <section class="note-box">
-            <span class="note-icon">i</span>
+
+        <!-- EXPERIMENTS -->
+        <section class="results-head">
+
             <div>
-                <strong>A little note</strong>
+                <p class="eyebrow dark-eyebrow">
+                    READY WHEN YOU ARE
+                </p>
+
+                <h2>
+                    All experiments <span class="heading-spark">✳</span>
+                </h2>
+            </div>
+
+            <p id="result-count" class="result-count">
+                Showing 10 experiments
+            </p>
+
+        </section>
+
+        <section
+            id="experiment-list"
+            class="experiment-grid"
+            aria-live="polite">
+        </section>
+
+        <div id="empty-state" class="empty-state" hidden>
+            <span>⌕</span>
+            <h3>No experiments found</h3>
+            <p>Try another keyword or category.</p>
+        </div>
+
+
+        <!-- NOTE -->
+        <section class="notice">
+
+            <span class="notice-icon">i</span>
+
+            <div>
+                <strong>About the Python programs</strong>
+
                 <p>
-                    Some Python programs in the supplied notes are
-                    incomplete. Their available steps are included
-                    without inventing missing source code.
+                    Complete example programs are included in the
+                    relevant experiments. Review the installation
+                    requirements before running them.
                 </p>
             </div>
+
         </section>
 
     </main>
 
+
+    <!-- FOOTER -->
     <footer>
-        <a href="#" class="footer-logo">My<span>Code</span>Library.</a>
-        <p>MADE WITH ♡ FOR LEARNING</p>
-        <a href="#" class="back-top">BACK TO TOP ↑</a>
+
+        <a class="footer-brand" href="#top">
+            My<span>Code</span>Library.
+        </a>
+
+        <span>MADE FOR LEARNING · HTML / CSS / PYTHON</span>
+
+        <a href="#top" class="back-top">
+            BACK TO TOP ↑
+        </a>
+
     </footer>
+
 
     <script src="script.js"></script>
 
